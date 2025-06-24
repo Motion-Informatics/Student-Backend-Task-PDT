@@ -186,6 +186,20 @@ In the `add_patient` and `add_user` folders, you will find two example test file
 
 Use these examples as a reference for writing your own tests for all four routes.
 
+**How to run your unit tests:**  
+You can use [pytest](https://docs.pytest.org/) to run your unit tests from the terminal.  
+For example, to run all tests in a specific test file, use:
+
+```
+pytest <test_file>.py
+```
+
+Or, to run all tests in the `tests` directory:
+
+```
+pytest tests/
+```
+
 ## ⭐ Bonus Tasks
 
 If you want to challenge yourself further, here are three optional bonus tasks:
