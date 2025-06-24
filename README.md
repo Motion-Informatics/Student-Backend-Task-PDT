@@ -200,8 +200,6 @@ Or, to run all tests in the `tests` directory:
 pytest tests/
 ```
 
-Make sure you are in the project root directory when running
-
 ## ⭐ Bonus Tasks
 
 If you want to challenge yourself further, here are three optional bonus tasks:
