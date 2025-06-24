@@ -256,7 +256,7 @@ I know this is a lot to handle, and there may be things in this task that you ha
 Please don’t hesitate to contact me if you have questions or need help with anything. I’m here to support you throughout the process.
 
 You can contact me at:  
-📞 054-5638066␣␣
+📞 054-5638066<br>
 ✉️ shawn@motioninformatics.ai
 
 Good luck, and I look forward to seeing your work!
