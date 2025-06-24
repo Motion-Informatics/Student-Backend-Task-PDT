@@ -220,11 +220,11 @@ If you want to challenge yourself further, here are three optional bonus tasks:
    Choose and document your codes as you see fit, ensuring each scenario is clearly represented.
 
    4. **Use Git Integration:**  
-   Create a branch with your ID number.
-   Make meaningful commits and push your changes regularly.  
-   Use clear, descriptive commit messages and maintain a clean commit history.  
-   Good version control practices are a plus!
-   Push access will be enabled for a 30-minute window at the final date of the task.
+   Create a branch with your ID number.<br>
+   Make meaningful commits.<br>
+   Use clear, descriptive commit messages and maintain a clean commit history. <br> 
+   Good version control practices are a plus!<br>
+   Push access will be enabled for a 30-minute window at the final date of the task.<br>
 
 ---
 
@@ -255,7 +255,7 @@ I know this is a lot to handle, and there may be things in this task that you ha
 Please don’t hesitate to contact me if you have questions or need help with anything. I’m here to support you throughout the process.
 
 You can contact me at:  
-📞 054-5638066 
+📞 054-5638066 <br>
 ✉️ shawn@motioninformatics.ai
 
 Good luck, and I look forward to seeing your work!
