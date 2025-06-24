@@ -18,7 +18,7 @@ COPY playground/init_db.py .
 # Make sure the database directory exists
 RUN mkdir -p /var/task/database
 
-# Run the init script to generate the DB with 3 tables
+# Run the init script to generate the DB with 3 table
 RUN python3 init_db.py
 
 # Lambda handler
