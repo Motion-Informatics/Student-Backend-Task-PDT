@@ -21,8 +21,5 @@ RUN mkdir -p /var/task/database
 # Run the init script to generate the DB with 3 tables
 RUN python3 init_db.py
 
-# Copy the DB to a volume-mountable location (optional, already in /var/task/database)
-# VOLUME /var/task/database
-
 # Lambda handler
 CMD ["lambda_handler.lambda_handler"]
