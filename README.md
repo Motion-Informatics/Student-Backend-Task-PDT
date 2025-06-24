@@ -226,6 +226,8 @@ If you want to challenge yourself further, here are three optional bonus tasks:
    Make meaningful commits and push your changes regularly.  
    Use clear, descriptive commit messages and maintain a clean commit history.  
    Good version control practices are a plus!
+   Push access will be enabled for a 30-minute window at the final date of the task.
+
 
 ---
 
@@ -256,7 +258,7 @@ I know this is a lot to handle, and there may be things in this task that you ha
 Please don’t hesitate to contact me if you have questions or need help with anything. I’m here to support you throughout the process.
 
 You can contact me at:  
-📞 [Your Phone Number]  
-✉️ [Your Email Address]
+📞 054-5638066 
+✉️ shawn@motioninformatics.ai
 
 Good luck, and I look forward to seeing your work!
