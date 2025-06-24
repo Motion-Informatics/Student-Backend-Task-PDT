@@ -14,7 +14,7 @@ pandas==2.3.0
 pluggy==1.6.0
 Pygments==2.19.1
 pytest==8.4.0
-python-dateutil==2.9.0.post0
+python-dateutil==2.9.0.post0a
 pytz==2025.2
 requests==2.32.4
 serverless-wsgi==3.1.0
