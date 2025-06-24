@@ -220,8 +220,8 @@ If you want to challenge yourself further, here are three optional bonus tasks:
    Choose and document your codes as you see fit, ensuring each scenario is unique.
 
 4. **Use Git Integration:**  
-   Create a branch with your name.
-   Make meaningful commits and push your changes regularly.  
+   Create a branch with your ID number.
+   Make meaningful commits. 
    Use clear, descriptive commit messages and maintain a clean commit history.  
    Good version control practices are a plus!
    Push access will be enabled for a 30-minute window at the final date of the task.
