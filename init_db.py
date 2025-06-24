@@ -2,10 +2,15 @@
 import sqlite3
 import os
 
-# Define path to the local database folder
-db_dir = os.path.join(os.getcwd(), 'database')
+# Always relative to the script location
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+db_dir = os.path.join(BASE_DIR, "database")
+
+# Create the database folder if it doesn't exist
 os.makedirs(db_dir, exist_ok=True)
-db_path = os.path.join(db_dir, 'SSMD.db')
+
+# Path to the SQLite file
+db_path = os.path.join(db_dir, "SSMD.db")
 
 # SQL schema to create all 3 tables
 schema = """

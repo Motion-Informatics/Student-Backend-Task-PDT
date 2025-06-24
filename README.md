@@ -21,7 +21,7 @@ This task is designed to test and strengthen your understanding of:
 
 You don’t need to set up Docker or Flask from scratch, but you do need to understand how they work and how to use them effectively.
 
-## 🛠️ Environment Setup
+## 🛠️ Environment Setup (Windows/PowerShell)
 
 1. **Install Docker**  
    You will need Docker installed on your machine to run the backend environment.  
@@ -37,8 +37,8 @@ You don’t need to set up Docker or Flask from scratch, but you do need to unde
 3. **Clone the Repository**  
    Clone this repository to your local machine using the following command (replace the link with the actual repository URL when available):
 
-   ```
-   git clone git clone --branch Student-Backend-Task-PDT-Mac https://github.com/Motion-Informatics/Student-Backend-Task-PDT.git
+   ```powershell
+   git clone --branch Student-Backend-Task-PDT-Windows https://github.com/Motion-Informatics/Student-Backend-Task-PDT.git
    ```
 
 4. **Set Up a Local Python Virtual Environment**  
@@ -49,14 +49,17 @@ You don’t need to set up Docker or Flask from scratch, but you do need to unde
    A Python virtual environment (`venv`) is an isolated workspace on your system where you can install Python packages and dependencies specific to a project, without affecting other projects or the global Python installation. This helps prevent version conflicts and makes it easier to manage project-specific requirements.  
    When you activate a virtual environment, any Python packages you install or run will be contained within that environment.
 
-   To set up and activate the virtual environment, run the following commands from the project root one by one:
+   To set up and activate the virtual environment, run the following commands from the project root:
 
    ```bash
    # Create virtual environment
    python3 -m venv venv
 
-   # Activate virtual environment (Mac/Linux)
-   source venv/bin/activate
+   # For Windows PowerShell, use:
+   # venv\Scripts\Activate.ps1
+
+   # For Windows Command Prompt (cmd.exe), use:
+   # venv\Scripts\activate.bat
 
    # Install required dependencies
    pip install -r requirements.txt
@@ -67,33 +70,32 @@ You don’t need to set up Docker or Flask from scratch, but you do need to unde
 
 
 5. **Build the Docker Image**  
-   In the root of the project, there is a shell script called `build.sh` that you need to run in order to build the Docker image for the backend environment.
+   In the root of the project, there is a PowerShell script called `build.ps1` that you need to run in order to build the Docker image for the backend environment.
 
-   Open your terminal, navigate to the project root directory, and run:
+   Open PowerShell, navigate to the project root directory, and run:
 
-   ```
-   ./build.sh
+   ```powershell
+   .\build.ps1
    ```
 
    This script will execute the necessary Docker build command for you.  
-   The contents of `build.sh` are as follows:
+   The contents of `build.ps1` are as follows:
 
-   ```bash
-   #!/bin/bash
+   ```powershell
    docker build -t student-backend-task .
    ```
 
    After the build completes, your Docker image will be ready to use.
 
 6. **Deploy the Environment**  
-   After building the Docker image, you can deploy the backend environment using the `deploy-local.sh` script located in the project root.
+   After building the Docker image, you can deploy the backend environment using the `deploy-local.ps1` script located in the project root.
 
    This script will start a Docker container based on the image you just built, mapping the necessary ports and mounting the database volume for local development and testing.
 
    To run the script, use:
 
-   ```
-   ./deploy-local.sh
+   ```powershell
+   .\deploy-local.ps1
    ```
 
    The script will:
@@ -101,7 +103,6 @@ You don’t need to set up Docker or Flask from scratch, but you do need to unde
    - Mount the local `database` folder into the container at `/var/task/database`
    - Start the container using the `pdt-backend-task` image
 
-   Once this script completes, your backend service should be running and accessible at `http://localhost:9000`.
 
 
 7. **Initialize the Database**  
@@ -112,12 +113,11 @@ You don’t need to set up Docker or Flask from scratch, but you do need to unde
 
    To run the script, use:
 
-   ```
-   python3 init_db.py
+   ```powershell
+   python init_db.py
    ```
 
    Make sure your Docker container is running before executing this step.
-
 
 8. **Environment Ready**
 
@@ -133,22 +133,22 @@ To help you work efficiently with the backend environment, several utility scrip
   It will connect you to the database and allow you to execute regular SQL commands.  
   You can use it as a reference for establishing database connections and performing basic operations.
 
-- **open_sqlite.sh:**  
-  This is a shell script that, when run, will open an interactive SQLite prompt connected to the project database.  
+- **open_sqlite.ps1:**  
+  This is a PowerShell script that, when run, will open an interactive SQLite prompt connected to the project database.  
   You can use this prompt to run SQL queries directly, insert new data, or retrieve information from the database for testing and debugging purposes.
 
-- **test_route_example.sh:**  
-  This shell script provides an example of how to make an HTTP request to the backend API.  
+- **test_route_example.ps1:**  
+  This PowerShell script provides an example of how to make an HTTP request to the backend API.  
   Specifically, it demonstrates how to test the "add patient" endpoint using a sample request.  
   You can use this script as a template for testing other API routes as well.
 
 - **notes.md:**  
-This markdown file contains a collection of basic shell commands that can help you navigate and work through this task more efficiently.  
-Refer to it whenever you need a quick reminder or example of useful terminal commands.
+  This markdown file contains a collection of basic PowerShell and command-line commands that can help you navigate and work through this task more efficiently.  
+  Refer to it whenever you need a quick reminder or example of useful terminal commands.
 
 ---
 💡 **Recommendation:**  
-For the best development experience, we recommend using [Visual Studio Code (VS Code)](https://code.visualstudio.com/) as your code editor, along with its integrated terminal. This setup makes it easy to run scripts, interact with the backend, and manage your code efficiently.
+For the best development experience, we recommend using [Visual Studio Code (VS Code)](https://code.visualstudio.com/) as your code editor, along with its integrated terminal or PowerShell. This setup makes it easy to run scripts, interact with the backend, and manage your code efficiently.
 
 
 ## 📝 Task Overview
@@ -168,7 +168,7 @@ These routes are already defined as empty functions, and you will find them in t
 Take your time to understand the requirements for each route before you start coding.
 
 > **Note:**  
-> After making any changes to the code, you should run the `build.sh` script again to rebuild the Docker image, and then redeploy the environment using `deploy-local.sh`.  
+> After making any changes to the code, you should run the `build.ps1` script again to rebuild the Docker image, and then redeploy the environment using `deploy-local.ps1`.  
 > The database and its data will remain unchanged during this process.
 
 ### Part 2: Create Unit Tests for the API Routes
@@ -176,7 +176,7 @@ Take your time to understand the requirements for each route before you start co
 The second part of the task is to write unit tests in Python for the four API routes you implemented.
 
 - You will find a `tests` folder in the project, which contains four subfolders—one for each route.
-- For each route, create one or more unit test files that you think are important. Consider different scenarios, such as valid input, invalid input, missing fields, and edge cases.
+- For each route, create one or more unit tests that you think are important. Consider different scenarios, such as valid input, invalid input, missing fields, and edge cases.
 - Your tests should be meaningful and should work (i.e., they should pass or fail appropriately based on your implementation).
 
 **Examples:**  
@@ -185,22 +185,6 @@ In the `add_patient` and `add_user` folders, you will find two example test file
 - The other example demonstrates how to check the data returned from the database after making a request.
 
 Use these examples as a reference for writing your own tests for all four routes.
-
-**How to run your unit tests:**  
-You can use [pytest](https://docs.pytest.org/) to run your unit tests from the terminal.  
-For example, to run all tests in a specific test file, use:
-
-```
-pytest <test_file>.py
-```
-
-Or, to run all tests in the `tests` directory:
-
-```
-pytest tests/
-```
-
-Make sure you are in the project root directory when running
 
 ## ⭐ Bonus Tasks
 
@@ -212,16 +196,16 @@ If you want to challenge yourself further, here are three optional bonus tasks:
    (Logging is not required in your unit tests.)
 
 2. **Refactor Using Utils:**  
-   In the `Utils` folder, you will find four utility files—one for each API route.  
+   In the `utils` folder, you will find four utility files—one for each API route.  
    As a bonus, move as much logic as possible from your route handlers into these utility files by implementing the necessary functions.  
-   The goal is to keep your route functions very simple, delegating all processing and validation to the utility functions.You can add more Util files as you please.
+   The goal is to keep your route functions very simple, delegating all processing and validation to the utility functions.
 
 3. **Custom Status Codes:**  
    Implement custom return status codes in your API responses (in addition to the standard HTTP status codes).  
    These should be unique codes (at least five digits) that can help identify specific issues or scenarios for each route.  
-   Choose and document your codes as you see fit, ensuring each scenario is unique.
+   Choose and document your codes as you see fit, ensuring each scenario is clearly represented.
 
-4. **Use Git Integration:**  
+   4. **Use Git Integration:**  
    Create a branch with your name.
    Make meaningful commits and push your changes regularly.  
    Use clear, descriptive commit messages and maintain a clean commit history.  
@@ -245,7 +229,7 @@ As you work on this task, please keep the following in mind:
 - **Use Any Tools You Need:**  
   You are welcome to use any tools that help you complete the task, including AI tools, database visualization helpers, or any other resources that make your work easier and more effective.
 
-Your attention to these details will make your work stand out and ensure it’s easy to review
+Your attention to these details will make your work stand out and ensure it’s easy to review and maintain.
 
 ---
 
