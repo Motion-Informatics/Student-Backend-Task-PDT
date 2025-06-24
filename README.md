@@ -38,7 +38,7 @@ You don’t need to set up Docker or Flask from scratch, but you do need to unde
    Clone this repository to your local machine using the following command (replace the link with the actual repository URL when available):
 
    ```
-   git clone https://github.com/Motion-Informatics/Student-Backend-Task-PDT.git
+   git clone git clone --branch Student-Backend-Task-PDT-Mac https://github.com/Motion-Informatics/Student-Backend-Task-PDT.git
    ```
 
 4. **Set Up a Local Python Virtual Environment**  
