@@ -9,7 +9,7 @@ import json
 
 # This file contains example tests for the API endpoints and DB queries for the PDT project.
 # In order to run this test, you need the local server running
-# You can run it with the command: pytest <filename>.py
+# You can run it with the command: pytest <filename>.py.
 
 BASE_URL = "http://localhost:9000/2015-03-31/functions/function/invocations"
 
