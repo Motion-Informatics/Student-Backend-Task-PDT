@@ -32,5 +32,8 @@ def test_add_patient():
     }
 
     res = requests.post(BASE_URL, json=lambda_event)
-    assert res.status_code == 200
+    # assert res.status_code == 200 #should be allways 200
+    result = res.json()
+    statusCode = result.get("statusCode", 0) # your code status code
+    assert statusCode == 200 #should be allways 200
 
