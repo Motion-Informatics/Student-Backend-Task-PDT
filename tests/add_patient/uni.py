@@ -16,18 +16,22 @@ BASE_URL = "http://localhost:9000/2015-03-31/functions/function/invocations"
 # Check if return status code is 200
 def test_add_patient():
     lambda_event = {
-        "httpMethod": "PUT",
+        "httpMethod": "POST",
         "path": "/api/add-patient",
         "headers": {
             "Content-Type": "application/json"
         },
         "body": json.dumps({
-            "UserName": "test_ext",
+            
             "FirstName": "Tester",
             "LastName": "External",
-            "PhoneNumber": "1234567890",
             "HomeAddress": "100 Test Ave",
-            "ID": "203846573"
+            "ID": "203846573",
+            "InterfaceLanguage": "en",
+            "DateOfBirth": "1990-01-01",
+            "Gender": "Male",
+            "MedicalHistory": "No known allergies"
+
         })
     }
 
